@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>FRAMEWORK TEST</title>
+<style>
+	.question {
+  background-color: #f9f9f9;
+  border-left: 5px solid #4CAF50;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.question h3 {
+  margin-top: 0;
+  color: #333;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #45a049;
+}
+header, footer {
+	background-color: #191313;
+	color: aliceblue;
+	text-align: center;
+	padding: 1rem 0;
+}
+@media (max-width : 758px ){
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.column {
+		min-width: 90%;
+	}
+}
+#result {
+	display: none;
+  background-color: #f0f0f0;
+  border: 2px dashed #ccc;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  color: #555;
+  text-align: center;
+  min-height: 50px;
+  transition: all 0.3s ease;
+}
+#result.active {
+	display: block;
+  background-color: #e8f5e9;
+  border: 2px solid #4CAF50;
+  color: #2e7d32;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.w {
+	color: aliceblue;
+}
+
+	</style>
+</head>
+
+<body>
+		<header><h1>FRAMEWORK ТЕСТ</h1>
+			
+	<p><a class="w" href='index.html'>Головна</a> &emsp;<a class="w" href='test.html'>Тест</a> &emsp;<a class="w" href='login.html'>Відповіді на тест</a> &emsp;<a class="w" href='zwyazok.html'>Зворотній звя'зок</a></p>
+	</header>
+	<h1>Тест. Фреймворк</h1>
+	<form id='test' name='test'>
+    <div class="question">
+      <h3>1. Що таке фреймворк у програмуванні?</h3>
+      <label><input type="radio" name="q1" value="a"> Операційна система</label><br>
+      <label><input type="radio" name="q1" value="b"> Комплексна бібліотека без обмежень</label><br>
+      <label><input type="radio" name="q1" value="c"> Інфраструктура програмних рішень</label><br>
+      <label><input type="radio" name="q1" value="d"> Графічний редактор</label>
+    </div>
+    <div class="question">
+      <h3>2. Яка головна мета використання фреймворку?</h3>
+      <label><input type="radio" name="q2" value="a"> Ускладнення розробки</label><br>
+      <label><input type="radio" name="q2" value="b"> Заміна програмістів</label><br>
+      <label><input type="radio" name="q2" value="c"> Полегшення створення складних систем</label><br>
+      <label><input type="radio" name="q2" value="d"> Створення дизайну</label>
+    </div>
+    <div class="question">
+      <h3>3. Чим фреймворк відрізняється від звичайної бібліотеки?</h3>
+      <label><input type="radio" name="q3" value="a"> Не має API</label><br>
+      <label><input type="radio" name="q3" value="b"> Не містить коду</label><br>
+      <label><input type="radio" name="q3" value="c"> Має обмеження і правила структури</label><br>
+      <label><input type="radio" name="q3" value="d"> Використовується лише для графіки</label>
+    </div>
+    <div class="question">
+      <h3>4. Що зазвичай включає програмний фреймворк?</h3>
+      <label><input type="radio" name="q4" value="a"> Тільки інтерфейс</label><br>
+      <label><input type="radio" name="q4" value="b"> Лише базу даних</label><br>
+      <label><input type="radio" name="q4" value="c"> Дизайн, логіку, базову функціональність</label><br>
+      <label><input type="radio" name="q4" value="d"> Тільки скрипти</label>
+    </div>
+    <div class="question">
+      <h3>5. На чому зазвичай базується побудова кінцевого продукту у фреймворку?</h3>
+      <label><input type="radio" name="q5" value="a"> На HTML</label><br>
+      <label><input type="radio" name="q5" value="b"> На API</label><br>
+      <label><input type="radio" name="q5" value="c"> На CSS</label><br>
+      <label><input type="radio" name="q5" value="d"> На SQL</label>
+    </div>
+
+    <div class="question">
+      <h3>6. Що таке каркас застосунку?</h3>
+      <label><input type="radio" name="q6" value="a"> Графічний шаблон</label><br>
+      <label><input type="radio" name="q6" value="b"> Стандартна структура програми</label><br>
+      <label><input type="radio" name="q6" value="c"> Мережевий протокол</label><br>
+      <label><input type="radio" name="q6" value="d"> Система без коду</label>
+    </div>
+    <div class="question">
+      <h3>7. Чому каркаси застосунків стали популярними?</h3>
+      <label><input type="radio" name="q7" value="a"> Через складність реалізації</label><br>
+      <label><input type="radio" name="q7" value="b"> Через нестандартність інтерфейсів</label><br>
+      <label><input type="radio" name="q7" value="c"> Через появу елементів інтерфейсу зі стандартною структурою</label><br>
+      <label><input type="radio" name="q7" value="d"> Через відсутність API</label>
+    </div>
+    <div class="question">
+      <h3>8. Що спрощує створення графічних інтерфейсів у каркасних застосунках?</h3>
+      <label><input type="radio" name="q8" value="a"> Випадкова структура коду</label><br>
+      <label><input type="radio" name="q8" value="b"> Відомість внутрішньої реалізації</label><br>
+      <label><input type="radio" name="q8" value="c"> Відсутність логіки</label><br>
+      <label><input type="radio" name="q8" value="d"> Наявність лише CSS</label>
+    </div>
+    <div class="question">
+      <h3>9. Який підхід зазвичай використовують для реалізації каркаса?</h3>
+      <label><input type="radio" name="q9" value="a"> Функціональне програмування</label><br>
+      <label><input type="radio" name="q9" value="b"> Процедурне програмування</label><br>
+      <label><input type="radio" name="q9" value="c"> Об'єктно-орієнтоване програмування</label><br>
+      <label><input type="radio" name="q9" value="d"> Машинне навчання</label>
+    </div>
+    <div class="question">
+      <h3>10. Як частини програми можуть взаємодіяти з фреймворком?</h3>
+      <label><input type="radio" name="q10" value="a"> Через SQL-запити</label><br>
+      <label><input type="radio" name="q10" value="b"> Через успадкування від базових класів</label><br>
+      <label><input type="radio" name="q10" value="c"> Через HTML-таблиці</label><br>
+      <label><input type="radio" name="q10" value="d"> Через CSS-стилі</label>
+    </div>
+		<br>
+   <button type="button" onclick="checkAnswers()">Перевірити результат</button>
+	</form>
+	<div id='result'>
+	<p id='nc'></p></div>
+	<script>
+	function checkAnswers() {
+  let score = 0;
+
+  const q1 = document.querySelector('input[name="q1"]:checked');
+  if (q1 && q1.value === "c") score++;
+
+  const q2 = document.querySelector('input[name="q2"]:checked');
+  if (q2 && q2.value === "c") score++;
+
+  const q3 = document.querySelector('input[name="q3"]:checked');
+  if (q3 && q3.value === "c") score++;
+
+  const q4 = document.querySelector('input[name="q4"]:checked');
+  if (q4 && q4.value === "c") score++;
+
+  const q5 = document.querySelector('input[name="q5"]:checked');
+  if (q5 && q5.value === "b") score++;
+
+  const q6 = document.querySelector('input[name="q6"]:checked');
+  if (q6 && q6.value === "b") score++;
+
+  const q7 = document.querySelector('input[name="q7"]:checked');
+  if (q7 && q7.value === "c") score++;
+
+  const q8 = document.querySelector('input[name="q8"]:checked');
+  if (q8 && q8.value === "b") score++;
+
+  const q9 = document.querySelector('input[name="q9"]:checked');
+  if (q9 && q9.value === "c") score++;
+
+  const q10 = document.querySelector('input[name="q10"]:checked');
+  if (q10 && q10.value === "b") score++;
+
+  // Виведення результату
+  let message = `Ваш результат: ${score} з 10 балів.`;
+  if (score === 10) {
+    message += " Відмінно! 💯";
+  } else if (score >= 7) {
+    message += " Дуже добре! 👍";
+  } else if (score >= 4) {
+    message += " Непогано, але варто повторити матеріал. 📘";
+  } else {
+    message += " Спробуй ще раз — ти зможеш! 💪";
+  }
+
+ document.getElementById("nc").textContent = message;
+document.getElementById("result").classList.add("active");
+}
+	</script>
+
+	
+	
+		<footer>&copy; Київ 2025 </footer>
+</body>
+</html>

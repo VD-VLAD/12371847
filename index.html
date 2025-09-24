@@ -1,0 +1,357 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Framework</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<style>
+	header, footer {
+	background-color: #191313;
+	color: aliceblue;
+	text-align: center;
+	padding: 1rem 0;
+}
+@media (max-width : 758px ){
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.d1 {
+		min-width: 90%;
+	}
+}
+.w {
+	color: aliceblue;
+}
+.d1 {
+	flex-direction: column;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 20px;
+	flex: 1;
+}
+body {
+	background-color: #f4f4f4;
+	font-family: Arial, sams-serif;
+
+}
+.container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 20px;
+}
+
+
+h1 {
+	font-size: 50px;
+}
+#topBtn {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  padding: 12px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+#topBtn:hover {
+  background-color: #2980b9;
+}
+.registration-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.registration-form h2 {
+  text-align: center;
+  color: #191313;
+  margin-bottom: 10px;
+}
+
+.registration-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.registration-form button {
+  padding: 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration-form button:hover {
+  background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+  .registration-form {
+    width: 90%;
+  }
+}
+.beautiful-text {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.beautiful-text h1,
+.beautiful-text h2,
+.beautiful-text h3 {
+  color: #34495e;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.beautiful-text a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.beautiful-text a:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+.beautiful-text blockquote {
+  margin: 20px 0;
+  padding: 15px 20px;
+  background-color: #ecf0f1;
+  border-left: 5px solid #3498db;
+  font-style: italic;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .beautiful-text {
+    font-size: 16px;
+    padding: 15px;
+  }
+}
+.beautiful-text {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #2c3e50;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+.search-form {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.search-form input[type="text"] {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  width: 200px;
+  font-size: 16px;
+}
+
+.search-form button {
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #2980b9;
+}
+
+	</style>
+</head>
+
+<body>
+	<header><h1>FRAMEWORK</h1>
+		<form class="search-form" action="search.html" method="GET">
+  <input type="text" name="query" placeholder="Пошук..." required>
+  <button type="submit">🔍</button>
+</form>
+	<p><a class="w" href='index.html'>Головна</a> &emsp;<a class="w" href='test.html'>Тест</a> &emsp;<a class="w" href='login.html'>Відповіді на тест</a> &emsp;<a class="w" href='zwyazok.html'>Зворотній зв'язок</a></p>
+	</header>
+	<div> 
+	<center><h1>Що таке фреймворк простими словами</h1></center>
+	</div>
+	<main class="container">
+	<div class='d1'>
+		<table style="text-align: left;">
+		<tr>
+		<th>Зміст<th>
+		</tr>
+		<tr>
+		<td><a href='#zag1'>Вступ</a></td>
+		</tr>
+		<tr>
+		<td><a href='#zag2'>Програмний фреймворк</a></td>
+		</tr>
+		<tr>
+		<td><a href='#zag3'>Каркас застосунку</a></td>
+		</tr>
+		<tr>
+		<td><a href='#zag3'>Посилання</a></td>
+		</tr>
+		</table>
+	</div>
+
+	<div class="d1 beautiful-text">
+		<p><center><image src="image/Im2.webp"></image></center></p>
+		<p><h2 id='zag1'>Що таке фреймворк</h2></p>
+		Фреймворк (англ. Framework, каркас, платформа, структура, інфраструктура) — інфраструктура програмних рішень, що полегшує розробку складних систем. Спрощено дану інфраструктуру можна вважати своєрідною комплексною бібліотекою, але при цьому вона має ряд обмежень, що задають правила створення структури проєкту та написання коду.
+		<p><center><image src='image/Im1.webp'></image></center></p>
+			<h2 id='zag2'>Програмний фреймворк</h2>
+			<p>Програмний фреймворк (англ. software framework) — це готовий до використання комплекс програмних рішень, включаючи дизайн, логіку та базову функціональність системи або підсистеми. Відповідно — програмний фреймворк може містити в собі також допоміжні програми, деякі бібліотеки коду, скрипти та загалом все, що полегшує створення та поєднання різних компонентів великого програмного забезпечення чи швидке створення готового і не обов'язково об'ємного програмного продукту. Побудова кінцевого продукту відбувається, зазвичай, на базі єдиного API.</p>
+			<h2 id='zag3'>Каркас застосунку</h2>
+			<p>Одна з головних переваг, при використанні каркасних застосунків, полягає в тому, що такі програми мають стандартну структуру. Каркаси застосунків стали популярними з появою елементів інтерфейсу, які мали тенденцію до реалізації стандартної структури для додатків. З їх використанням стало набагато простіше створювати засоби для автоматичного створення графічних інтерфейсів, оскільки структура внутрішньої реалізації коду програми стала відома заздалегідь. Для забезпечення каркаса, зазвичай, використовують підходи об'єктно-орієнтованого програмування, наприклад, частини програми можуть успадковуватися від базових класів фреймворку.</p>
+			<h2 id='zag4'>Посилання</h2>
+			<p><a href='https://web.archive.org/web/20160507234030/http://www.elegantcoding.com/2011/07/software-frameworks-resistance-isnt.html'>Програмні фреймворки: опір не даремний (англ.)</a></p>
+			<p><a href='https://davis.lbl.gov/home/scidac/node8.html'>Підхід до архітектури фреймворків (англ.)</a></p>
+			<p><a href='https://web.archive.org/web/20160328224926/http://www.cse.wustl.edu/~schmidt/PDF/HPL.pdf'>Патерни та фреймворки у створенні об'єктно-орієнтованого програмного забезпечення (англ.)</a></p>
+		
+	
+  <button class="btn btn-primary mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#moreText" aria-expanded="false" aria-controls="moreText">
+    Дізнатися більше
+  </button>
+
+  <div class="collapse" id="moreText">
+    <div class="card card-body beautiful-text">
+      <h2 id="zag5">Переваги використання фреймворків</h2>
+      <ul>
+        <li>📦 Швидка розробка — багато готових компонентів</li>
+        <li>🧩 Стандартизована структура проєкту</li>
+        <li>🔐 Вбудовані механізми безпеки</li>
+        <li>📚 Велика спільнота та документація</li>
+        <li>🔄 Легке масштабування та підтримка</li>
+      </ul>
+
+      <h2 id="zag6">Приклади популярних фреймворків</h2>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Назва</th>
+            <th>Мова</th>
+            <th>Призначення</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>React</td><td>JavaScript</td><td>Побудова інтерфейсів (UI)</td></tr>
+          <tr><td>Laravel</td><td>PHP</td><td>Розробка бекенду та API</td></tr>
+          <tr><td>Django</td><td>Python</td><td>Швидка розробка вебдодатків</td></tr>
+          <tr><td>Flutter</td><td>Dart</td><td>Кросплатформні мобільні додатки</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="zag7">Фреймворк vs Бібліотека</h2>
+      <p>Фреймворк задає структуру та правила, а бібліотека — просто набір функцій. У фреймворку ти працюєш за його логікою, а з бібліотекою — як тобі зручно.</p>
+      <blockquote class="blockquote">“Фреймворк викликає твій код, а ти викликаєш бібліотеку.”</blockquote>
+
+      <h2 id="zag8">Коли варто використовувати фреймворк?</h2>
+      <p>✅ Якщо ти створюєш складний або масштабований проєкт<br>
+         ✅ Якщо потрібно швидко запустити MVP<br>
+         ✅ Якщо важлива безпека, підтримка та розширення<br>
+         ❌ Якщо проєкт дуже простий — можна обійтись без фреймворку</p>
+
+      <h2 id="zag9">Корисні посилання</h2>
+      <p><a href="https://roadmap.sh/frontend" target="_blank">Frontend Roadmap</a></p>
+      <p><a href="https://github.com/thedaviddias/Front-End-Checklist" target="_blank">Front-End Checklist</a></p>
+    </div>
+  </div>
+		
+	</div>
+	<div class='d1'>
+		
+<form class="registration-form" action="register.php" method="POST">
+  <h2>Форма реєстрації</h2>
+    <label for="username">Ім’я користувача:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password" required>
+
+    <label for="confirm">Підтвердження пароля:</label>
+    <input type="password" id="confirm" name="confirm" required>
+
+    <button type="submit" style="padding: 10px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer;">
+      Зареєструватися
+    </button>
+  </form>
+		
+	</div>
+	<button onclick="scrollToTop()" id="topBtn" title="Наверх">↑</button>
+
+			</main>
+	<footer>&copy; Київ 2025 </footer>
+	<script>
+window.onscroll = function() {
+  const btn = document.getElementById("topBtn");
+  if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+    btn.style.display = "block";
+  } else {
+    btn.style.display = "none";
+  }
+};
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+
+</body>
+</html>

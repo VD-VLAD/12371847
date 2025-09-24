@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>Вхід</title>
+  <style>
+    body { font-family: Arial; background: #f0f0f0; text-align: center; height: fixed;}
+    input[type="password"] {
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+	  }
+	header, footer {
+	background-color: #191313;
+	color: aliceblue;
+	text-align: center;
+	padding: 1rem 0;	
+		
+}
+@media (max-width : 758px ){
+	.container {
+		flex-direction: column;
+		align-items: center;
+	}
+	.d1 {
+		min-width: 90%;
+	}
+}
+    .w {
+	color: aliceblue;
+}
+
+	  footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+  </style>
+</head>
+<body>
+
+		<header><h1>LOGIN</h1>
+	
+	<p><a class="w" href='index.html'>Головна</a> &emsp;<a class="w" href='test.html'>Тест</a> &emsp;<a class="w" href='test.html'>Відповіді на тест</a> &emsp;<a class="w" href='test.html'>Зворотній зв'язок</a></p>
+	</header>
+	
+  <h2>Введіть пароль для доступу</h2>
+  <input type="password" id="pass" placeholder="Пароль">
+  <br>
+  <button onclick="check()">Увійти</button>
+	</main>
+	<footer>&copy; Київ 2025 </footer>
+
+  <script>
+    function check() {
+      const input = document.getElementById("pass").value;
+      if (input === "Qwerty123") {
+        window.location.href = "answer.html"; 
+      } else {
+        alert("Невірний пароль!");
+      }
+    }
+  </script>
+
+</body>
+</html>
